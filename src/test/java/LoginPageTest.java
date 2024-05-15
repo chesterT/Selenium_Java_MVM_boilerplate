@@ -10,9 +10,10 @@ public class LoginPageTest {
     public void openLoginPage(){
         WebDriver driver;
         driver = new FirefoxDriver();
-        driver.get("http://localhost:5001/login");
+        driver.get("http://seleniumplayground.vectordesign.gr/");
         String title = driver.getTitle();
         Assert.assertEquals("Please sign in",title);
+        driver.quit();
     }
 
 
