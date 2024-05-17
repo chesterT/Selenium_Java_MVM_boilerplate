@@ -19,7 +19,7 @@ public class LoginPageTest {
 
     @After
     public void tearDown(){
-       //driver.quit();
+      // driver.quit();
     }
 
     @Test
@@ -31,7 +31,7 @@ public class LoginPageTest {
 
     @Test
     public void validateElementPresence(){
-           WebElement post =  driver.findElement(By.id("post-15"));
+           WebElement post = driver.findElement(By.id("post-15"));
            String postText = post.getText();
            System.out.println(postText);
            Assert.assertTrue(postText.contains(" Responsive Elements"));
