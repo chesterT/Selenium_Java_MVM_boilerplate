@@ -75,5 +75,12 @@ public class LoginPageTest {
         field.sendKeys("Hello tag name Selector");
     }
 
+    @Test
+    public  void  ClickButton() throws Exception {
+        WebElement dropdownElement = driver.findElement();
+    }
+
+
+
 
 }
