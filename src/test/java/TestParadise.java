@@ -29,7 +29,7 @@ public class TestParadise {
     public void mainPageSubTitleByClassName() {
         WebElement subTitleTL = driver.findElement(By.className("site-description"));
         System.out.println(subTitleTL.getText());
-        String expectedSubTitleTL = "Just another WorldPress site";
+//        String expectedSubTitleTL = "Just another WorldPress site";
 //        Assert.assertEquals(subTitleTL.toString(), expectedSubTitleTL);
     }
 
