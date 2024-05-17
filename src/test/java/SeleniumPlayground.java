@@ -60,7 +60,7 @@ public class SeleniumPlayground {
     @Test
     public void trySelectBox() {
         Select dropdown = new Select(driver.findElement(By.id("sword-playground-dropdown")));
-        dropdown.selectByValue("Apollo");
+        dropdown.selectByValue("apollo");
 
     }
 }
