@@ -11,8 +11,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class LoginPageTest {
     WebDriver driver;
+
     @Before
-    public void setUps(){
+    public void setUps() {
         driver = new FirefoxDriver();
         driver.get("http://seleniumplayground.vectordesign.gr/");
     }
@@ -23,25 +24,29 @@ public class LoginPageTest {
     }
 
     @Test
-    public void openLoginPage(){
+    public void openLoginPage() {
         String title = driver.getTitle();
         Assert.assertTrue(title.contains("Selenium Playground"));
 
     }
 
     @Test
+
     public void validateElementPresence(){
            WebElement post = driver.findElement(By.id("post-15"));
            String postText = post.getText();
            System.out.println(postText);
            Assert.assertTrue(postText.contains(" Responsive Elements"));
 
+
     }
 
     @Test
+
     public void enterDataInFieldbyID(){
         WebElement field =  driver.findElement(By.id("id-playground-field"));
         field.sendKeys("Hello Id Selector");
+
 
     }
 
