@@ -5,14 +5,20 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class NewTestsVasilis {
     WebDriver driver;
+
     @Before
-    public void setUps(){
-        driver = new FirefoxDriver();//creaTE DRIVER
+    public void setUps() {
+        driver = new ChromeDriver();//creaTE DRIVER
         driver.get("http://seleniumplayground.vectordesign.gr/"); //import the page
         driver.manage().window().maximize(); //maximize the window for better view
         System.out.println("The page is open");
@@ -22,10 +28,10 @@ public class NewTestsVasilis {
 
 
     @After
-    public void tearDown(){
-    //driver.quit();
+    public void tearDown() {
+        //driver.quit();
 
-}
+    }
 
 
     @Test
@@ -42,28 +48,15 @@ public class NewTestsVasilis {
 
     @Test
 
-    public void ClickButton() {
+    public void ClickButton() throws Exception {
         WebElement dropdownElement = driver.findElement(By.id("sword-playground-dropdown"));
+        new Actions(driver).scrollToElement(dropdownElement).perform();
         Select dropdown = new Select(dropdownElement);
+        dropdown.selectByValue("apollo");
 
-// Case-sensitive value
-        String caseSensitiveValue = "Apollo";
-
-        for (WebElement option : dropdown.getOptions()) {
-            if (option.getText().equals(caseSensitiveValue)) {
-                option.click();
-                break;
-                //WebElement click= driver.findElement(By.id("sword-playground-dropdown"));
-                //new Select(driver.findElement(By.id("sword-playground-dropdown"))).selectByValue("Apollo");
-
-        }
+    }
 
 
-
-            //driver.close();
-            //System.out.println("Test Finished");
-
-        }
-        ;
-
-    }};
+    //driver.close();
+    //System.out.println("Test Finished");
+}
