@@ -37,8 +37,9 @@ public class NewTestsVasilis {
         driver.findElement(By.name("name-playground-field")).sendKeys("aaa");
         driver.findElement(By.className("class-playground-field")).sendKeys("aaa");
         driver.findElement(By.cssSelector(".css-playground-field")).sendKeys("aaa");
-        //driver.findElement(By.xpath("//html/body/div/div[2]/div[2]/form/div[2]/div[4]/input")).sendKeys("aaa");
+        //driver.findElement(By.xpath("/html/body/main/article[5]/div[1]/div/div[2]/div[2]/div[1]/div[3]/div[4]/input")).sendKeys("aaa");
     }
+
     @Test
 
     public void ClickButton() {
