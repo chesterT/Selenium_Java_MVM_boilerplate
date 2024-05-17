@@ -1,1 +1,6 @@
-# Selenium_Java_MVM_boilerplate
+# Selenium Java MVM boilerplate
+
+Site under test:
+
+    seleniumplayground.vectordesign.gr
+
